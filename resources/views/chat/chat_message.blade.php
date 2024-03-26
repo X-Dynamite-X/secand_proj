@@ -2,7 +2,7 @@
     <div class="card-header msg_head">
         <div class="d-flex bd-highlight">
             <div class="img_cont">
-                <img src="img//-5818810161089854386_120.jpg" class="rounded-circle user_img" />
+                <img src="/img//-5818810161089854386_120.jpg" class="rounded-circle user_img" />
                 <span class="online_icon"></span>
             </div>
             <div class="user_info">
@@ -27,7 +27,7 @@
     <div class="card-body msg_card_body">
         <div class="d-flex justify-content-start mb-4">
             <div class="img_cont_msg">
-                <img src="img//-5818810161089854386_120.jpg" class="rounded-circle user_img_msg" />
+                <img src="/img//-5818810161089854386_120.jpg" class="rounded-circle user_img_msg" />
             </div>
             <div class="msg_cotainer">
                 Hi, how are you samim?
@@ -40,12 +40,12 @@
                 <span class="msg_time_send">8:55 AM, Today</span>
             </div>
             <div class="img_cont_msg">
-                <img src="img/-5818810161089854385_120.jpg" class="rounded-circle user_img_msg" />
+                <img src="/img/-5818810161089854385_120.jpg" class="rounded-circle user_img_msg" />
             </div>
         </div>
         <div class="d-flex justify-content-start mb-4">
             <div class="img_cont_msg">
-                <img src="img//-5818810161089854386_120.jpg" class="rounded-circle user_img_msg" />
+                <img src="/img//-5818810161089854386_120.jpg" class="rounded-circle user_img_msg" />
             </div>
             <div class="msg_cotainer">
                 I am good too, thank you for your chat template
@@ -58,12 +58,12 @@
                 <span class="msg_time_send">9:05 AM, Today</span>
             </div>
             <div class="img_cont_msg">
-                <img src="img/-5818810161089854385_120.jpg" class="rounded-circle user_img_msg" />
+                <img src="/img/-5818810161089854385_120.jpg" class="rounded-circle user_img_msg" />
             </div>
         </div>
         <div class="d-flex justify-content-start mb-4">
             <div class="img_cont_msg">
-                <img src="img//-5818810161089854386_120.jpg" class="rounded-circle user_img_msg" />
+                <img src="/img//-5818810161089854386_120.jpg" class="rounded-circle user_img_msg" />
             </div>
             <div class="msg_cotainer">
                 I am looking for your next templates
@@ -76,12 +76,12 @@
                 <span class="msg_time_send">9:10 AM, Today</span>
             </div>
             <div class="img_cont_msg">
-                <img src="img/-5818810161089854385_120.jpg" class="rounded-circle user_img_msg" />
+                <img src="/img/-5818810161089854385_120.jpg" class="rounded-circle user_img_msg" />
             </div>
         </div>
         <div class="d-flex justify-content-start mb-4">
             <div class="img_cont_msg">
-                <img src="img//-5818810161089854386_120.jpg" class="rounded-circle user_img_msg" />
+                <img src="/img//-5818810161089854386_120.jpg" class="rounded-circle user_img_msg" />
             </div>
             <div class="msg_cotainer">
                 Bye, see you
@@ -94,12 +94,12 @@
                 <span class="msg_time_send">8:55 AM, Today</span>
             </div>
             <div class="img_cont_msg">
-                <img src="img/-5818810161089854385_120.jpg" class="rounded-circle user_img_msg" />
+                <img src="/img/-5818810161089854385_120.jpg" class="rounded-circle user_img_msg" />
             </div>
         </div>
         <div class="d-flex justify-content-start mb-4">
             <div class="img_cont_msg">
-                <img src="img//-5818810161089854386_120.jpg" class="rounded-circle user_img_msg" />
+                <img src="/img//-5818810161089854386_120.jpg" class="rounded-circle user_img_msg" />
             </div>
             <div class="msg_cotainer">
                 I am good too, thank you for your chat template
@@ -112,12 +112,12 @@
                 <span class="msg_time_send">9:05 AM, Today</span>
             </div>
             <div class="img_cont_msg">
-                <img src="img/-5818810161089854385_120.jpg" class="rounded-circle user_img_msg" />
+                <img src="/img/-5818810161089854385_120.jpg" class="rounded-circle user_img_msg" />
             </div>
         </div>
         <div class="d-flex justify-content-start mb-4">
             <div class="img_cont_msg">
-                <img src="img//-5818810161089854386_120.jpg" class="rounded-circle user_img_msg" />
+                <img src="/img//-5818810161089854386_120.jpg" class="rounded-circle user_img_msg" />
             </div>
             <div class="msg_cotainer">
                 I am looking for your next templates
@@ -130,12 +130,12 @@
                 <span class="msg_time_send">9:10 AM, Today</span>
             </div>
             <div class="img_cont_msg">
-                <img src="img/-5818810161089854385_120.jpg" class="rounded-circle user_img_msg" />
+                <img src="/img/-5818810161089854385_120.jpg" class="rounded-circle user_img_msg" />
             </div>
         </div>
         <div class="d-flex justify-content-start mb-4">
             <div class="img_cont_msg">
-                <img src="img//-5818810161089854386_120.jpg" class="rounded-circle user_img_msg" />
+                <img src="/img//-5818810161089854386_120.jpg" class="rounded-circle user_img_msg" />
             </div>
             <div class="msg_cotainer">
                 Bye, see you
@@ -148,12 +148,12 @@
                 <span class="msg_time_send">8:55 AM, Today</span>
             </div>
             <div class="img_cont_msg">
-                <img src="img/-5818810161089854385_120.jpg" class="rounded-circle user_img_msg" />
+                <img src="/img/-5818810161089854385_120.jpg" class="rounded-circle user_img_msg" />
             </div>
         </div>
         <div class="d-flex justify-content-start mb-4">
             <div class="img_cont_msg">
-                <img src="img//-5818810161089854386_120.jpg" class="rounded-circle user_img_msg" />
+                <img src="/img//-5818810161089854386_120.jpg" class="rounded-circle user_img_msg" />
             </div>
             <div class="msg_cotainer">
                 I am good too, thank you for your chat template
@@ -166,12 +166,12 @@
                 <span class="msg_time_send">9:05 AM, Today</span>
             </div>
             <div class="img_cont_msg">
-                <img src="img/-5818810161089854385_120.jpg" class="rounded-circle user_img_msg" />
+                <img src="/img/-5818810161089854385_120.jpg" class="rounded-circle user_img_msg" />
             </div>
         </div>
         <div class="d-flex justify-content-start mb-4">
             <div class="img_cont_msg">
-                <img src="img//-5818810161089854386_120.jpg" class="rounded-circle user_img_msg" />
+                <img src="/img//-5818810161089854386_120.jpg" class="rounded-circle user_img_msg" />
             </div>
             <div class="msg_cotainer">
                 I am looking for your next templates
@@ -184,12 +184,12 @@
                 <span class="msg_time_send">9:10 AM, Today</span>
             </div>
             <div class="img_cont_msg">
-                <img src="img/-5818810161089854385_120.jpg" class="rounded-circle user_img_msg" />
+                <img src="/img/-5818810161089854385_120.jpg" class="rounded-circle user_img_msg" />
             </div>
         </div>
         <div class="d-flex justify-content-start mb-4">
             <div class="img_cont_msg">
-                <img src="img//-5818810161089854386_120.jpg" class="rounded-circle user_img_msg" />
+                <img src="/img//-5818810161089854386_120.jpg" class="rounded-circle user_img_msg" />
             </div>
             <div class="msg_cotainer">
                 Bye, see you c6b908af

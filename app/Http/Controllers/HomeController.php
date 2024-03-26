@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
-use App\Models\ChatRoom;
+use App\Models\Conversation;
 use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
@@ -26,23 +26,16 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $rooms = ChatRoom::where('sender_id', Auth::user()->id)
-            ->orWhere('receiver_id', Auth::user()->id)
-            ->get();
 
-        $contacted_users = collect();
-
-        foreach ($rooms as $room) {
-            if ($room->sender->id != Auth::user()->id) {
-                $contacted_users->push($room->sender);
-            } elseif ($room->receiver->id != Auth::user()->id) {
-                $contacted_users->push($room->receiver);
-            }
-        }
-
-        $contacted_users = $contacted_users->unique();
+        $conversations = Conversation::all();
+        $users = User::all();
 
 
-        return view("chat.chat", ['rooms' => $rooms, "contacted_users" => $contacted_users]);
+
+
+
+
+
+        return view("chat.chat", ['users'=>$users,'conversations' => $conversations ]);
     }
 }

@@ -6,6 +6,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+
 
 class User extends Authenticatable
 {
@@ -45,14 +47,26 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
-    public function sentMessages()
+
+    public function conversations(): HasMany
     {
-        return $this->hasMany(ChatRoom::class, 'sender_id');
+        return $this->hasMany(Conversation::class);
     }
 
-    public function receivedMessages()
+    /**
+     * Get the messages sent by the user.
+     */
+    public function sentMessages(): HasMany
     {
-        return $this->hasMany(ChatRoom::class, 'receiver_id');
+        return $this->hasMany(Message::class, 'sender_user_id');
     }
 
+    /**
+     * Get the messages received by the user.
+     */
+    public function receivedMessages(): HasMany
+    {
+        return $this->hasMany(Message::class, 'receiver_user_id');
+    }
+    
 }
