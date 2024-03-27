@@ -6,34 +6,41 @@ use Illuminate\Http\Request;
 use App\Models\Message;
 use App\Models\Conversation;
 use App\Models\User;
-
-
+use App\Events\ChatUserOneToOneEvent;
+use Illuminate\Support\Facades\Auth;
 
 class MessageController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
+
+    public function store(Request $request, $conversation_id)
     {
-        //
+        $request->validate([
+            'message_text' => 'required',
+        ]);
+        $message = Message::create([
+            "conversation_id"  => $conversation_id,
+            "sender_user_id"   => Auth::user()->id,
+            "receiver_user_id" =>  $request->input('receiver_user_id'),
+            "message_text" => $request->input("message_text"),
+        ]);
+
+        broadcast(new ChatUserOneToOneEvent($message->conversation_id, $message->sender_user_id, $message->receiver_user_id, $message->message_text))->toOthers();
+        return view('chat.action_chat.broadcast', ['message' => $message]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+
+    public function receiveMessages(Request $request, $conversation_id)
     {
-        //
+        $conversation = Conversation::find($conversation_id);
+        if ($conversation->user1->id == Auth::user()->id) {
+            # code...
+            $receive_user = $conversation->user2;
+        } else {
+            $receive_user = $conversation->user1;
+        }
+        return view('chat.action_chat.receive', ['message_text' => $request->input('message_text'), 'receive_user' => $receive_user]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
 
     /**
      * Display the specified resource.
@@ -43,11 +50,19 @@ class MessageController extends Controller
         //
         // $conversation =Conversation::where("id",$conversation_id);
         $conversations = Conversation::all();
+        $conversation = Conversation::find($conversation_id);
+        $messages = Message::where("conversation_id", $conversation_id)
+            ->orderBy('created_at', 'asc')
+            ->get();
         $users = User::all();
-        return view("chat.chat_room",['conversations'=>$conversations,'users'=>$users]);
+        return view("chat.chat_room", ['conversations' => $conversations, 'users' => $users, 'conversation' => $conversation, "messages" => $messages]);
         // return view("chat.chat_room");
 
     }
+
+
+
+
 
     /**
      * Show the form for editing the specified resource.

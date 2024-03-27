@@ -2,11 +2,26 @@
     <div class="card-header msg_head">
         <div class="d-flex bd-highlight">
             <div class="img_cont">
-                <img src="/img//-5818810161089854386_120.jpg" class="rounded-circle user_img" />
+                @if ($conversation->user1->id != auth()->id())
+                    <img src="{{ asset('image/avatars/' . $conversation->user1->user_avatar) }}"
+                        class="rounded-circle user_img" />
+                @else
+                    <img src="{{ asset('image/avatars/' . $conversation->user2->user_avatar) }}"
+                        class="rounded-circle user_img" />
+                @endif
                 <span class="online_icon"></span>
             </div>
             <div class="user_info">
-                <span>Chat with Khalid</span>
+
+                <span>Chat with
+                    @if ($conversation->user1->id != auth()->id())
+                        {{ $conversation->user1->name }}
+                    @else
+                        {{ $conversation->user2->name }}
+                    @endif
+                </span>
+
+
                 <p>1767 Messages</p>
             </div>
             <div class="video_cam">
@@ -24,189 +39,97 @@
             </ul>
         </div>
     </div>
-    <div class="card-body msg_card_body">
-        <div class="d-flex justify-content-start mb-4">
-            <div class="img_cont_msg">
-                <img src="/img//-5818810161089854386_120.jpg" class="rounded-circle user_img_msg" />
-            </div>
-            <div class="msg_cotainer">
-                Hi, how are you samim?
-                <span class="msg_time">8:40 AM, Today</span>
-            </div>
-        </div>
-        <div class="d-flex justify-content-end mb-4">
-            <div class="msg_cotainer_send">
-                Hi Khalid i am good tnx how about you?
-                <span class="msg_time_send">8:55 AM, Today</span>
-            </div>
-            <div class="img_cont_msg">
-                <img src="/img/-5818810161089854385_120.jpg" class="rounded-circle user_img_msg" />
-            </div>
-        </div>
-        <div class="d-flex justify-content-start mb-4">
-            <div class="img_cont_msg">
-                <img src="/img//-5818810161089854386_120.jpg" class="rounded-circle user_img_msg" />
-            </div>
-            <div class="msg_cotainer">
-                I am good too, thank you for your chat template
-                <span class="msg_time">9:00 AM, Today</span>
-            </div>
-        </div>
-        <div class="d-flex justify-content-end mb-4">
-            <div class="msg_cotainer_send">
-                You are welcome
-                <span class="msg_time_send">9:05 AM, Today</span>
-            </div>
-            <div class="img_cont_msg">
-                <img src="/img/-5818810161089854385_120.jpg" class="rounded-circle user_img_msg" />
-            </div>
-        </div>
-        <div class="d-flex justify-content-start mb-4">
-            <div class="img_cont_msg">
-                <img src="/img//-5818810161089854386_120.jpg" class="rounded-circle user_img_msg" />
-            </div>
-            <div class="msg_cotainer">
-                I am looking for your next templates
-                <span class="msg_time">9:07 AM, Today</span>
-            </div>
-        </div>
-        <div class="d-flex justify-content-end mb-4">
-            <div class="msg_cotainer_send">
-                Ok, thank you have a good day
-                <span class="msg_time_send">9:10 AM, Today</span>
-            </div>
-            <div class="img_cont_msg">
-                <img src="/img/-5818810161089854385_120.jpg" class="rounded-circle user_img_msg" />
-            </div>
-        </div>
-        <div class="d-flex justify-content-start mb-4">
-            <div class="img_cont_msg">
-                <img src="/img//-5818810161089854386_120.jpg" class="rounded-circle user_img_msg" />
-            </div>
-            <div class="msg_cotainer">
-                Bye, see you
-                <span class="msg_time">9:12 AM, Today</span>
-            </div>
-        </div>
-        <div class="d-flex justify-content-end mb-4">
-            <div class="msg_cotainer_send">
-                Hi Khalid i am good tnx how about you?
-                <span class="msg_time_send">8:55 AM, Today</span>
-            </div>
-            <div class="img_cont_msg">
-                <img src="/img/-5818810161089854385_120.jpg" class="rounded-circle user_img_msg" />
-            </div>
-        </div>
-        <div class="d-flex justify-content-start mb-4">
-            <div class="img_cont_msg">
-                <img src="/img//-5818810161089854386_120.jpg" class="rounded-circle user_img_msg" />
-            </div>
-            <div class="msg_cotainer">
-                I am good too, thank you for your chat template
-                <span class="msg_time">9:00 AM, Today</span>
-            </div>
-        </div>
-        <div class="d-flex justify-content-end mb-4">
-            <div class="msg_cotainer_send">
-                You are welcome
-                <span class="msg_time_send">9:05 AM, Today</span>
-            </div>
-            <div class="img_cont_msg">
-                <img src="/img/-5818810161089854385_120.jpg" class="rounded-circle user_img_msg" />
-            </div>
-        </div>
-        <div class="d-flex justify-content-start mb-4">
-            <div class="img_cont_msg">
-                <img src="/img//-5818810161089854386_120.jpg" class="rounded-circle user_img_msg" />
-            </div>
-            <div class="msg_cotainer">
-                I am looking for your next templates
-                <span class="msg_time">9:07 AM, Today</span>
-            </div>
-        </div>
-        <div class="d-flex justify-content-end mb-4">
-            <div class="msg_cotainer_send">
-                Ok, thank you have a good day
-                <span class="msg_time_send">9:10 AM, Today</span>
-            </div>
-            <div class="img_cont_msg">
-                <img src="/img/-5818810161089854385_120.jpg" class="rounded-circle user_img_msg" />
-            </div>
-        </div>
-        <div class="d-flex justify-content-start mb-4">
-            <div class="img_cont_msg">
-                <img src="/img//-5818810161089854386_120.jpg" class="rounded-circle user_img_msg" />
-            </div>
-            <div class="msg_cotainer">
-                Bye, see you
-                <span class="msg_time">9:12 AM, Today</span>
-            </div>
-        </div>
-        <div class="d-flex justify-content-end mb-4">
-            <div class="msg_cotainer_send">
-                Hi Khalid i am good tnx how about you?
-                <span class="msg_time_send">8:55 AM, Today</span>
-            </div>
-            <div class="img_cont_msg">
-                <img src="/img/-5818810161089854385_120.jpg" class="rounded-circle user_img_msg" />
-            </div>
-        </div>
-        <div class="d-flex justify-content-start mb-4">
-            <div class="img_cont_msg">
-                <img src="/img//-5818810161089854386_120.jpg" class="rounded-circle user_img_msg" />
-            </div>
-            <div class="msg_cotainer">
-                I am good too, thank you for your chat template
-                <span class="msg_time">9:00 AM, Today</span>
-            </div>
-        </div>
-        <div class="d-flex justify-content-end mb-4">
-            <div class="msg_cotainer_send">
-                You are welcome
-                <span class="msg_time_send">9:05 AM, Today</span>
-            </div>
-            <div class="img_cont_msg">
-                <img src="/img/-5818810161089854385_120.jpg" class="rounded-circle user_img_msg" />
-            </div>
-        </div>
-        <div class="d-flex justify-content-start mb-4">
-            <div class="img_cont_msg">
-                <img src="/img//-5818810161089854386_120.jpg" class="rounded-circle user_img_msg" />
-            </div>
-            <div class="msg_cotainer">
-                I am looking for your next templates
-                <span class="msg_time">9:07 AM, Today</span>
-            </div>
-        </div>
-        <div class="d-flex justify-content-end mb-4">
-            <div class="msg_cotainer_send">
-                Ok, thank you have a good day
-                <span class="msg_time_send">9:10 AM, Today</span>
-            </div>
-            <div class="img_cont_msg">
-                <img src="/img/-5818810161089854385_120.jpg" class="rounded-circle user_img_msg" />
-            </div>
-        </div>
-        <div class="d-flex justify-content-start mb-4">
-            <div class="img_cont_msg">
-                <img src="/img//-5818810161089854386_120.jpg" class="rounded-circle user_img_msg" />
-            </div>
-            <div class="msg_cotainer">
-                Bye, see you c6b908af
-                <span class="msg_time">9:12 AM, Today</span>
-            </div>
+    <div class="card-body msg_card_body ">
+        <div class="message_spase">
+            @foreach ($messages as $message)
+                @php
+                    $createdAt = \Carbon\Carbon::parse($message->created_at);
+                    $now = \Carbon\Carbon::now();
+                @endphp
+
+                @if ($message->sender_user_id != Auth::user()->id)
+                    <div class="d-flex justify-content-start mb-4">
+                        <div class="img_cont_msg">
+                            <img src="{{ asset('image/avatars/' . $message->sender->user_avatar) }}"
+                                class="rounded-circle user_img_msg" />
+                        </div>
+                        <div class="msg_cotainer">
+                            <p class="text_message">{{ $message->message_text }} </p>
+                            {{-- <span class="msg_time"> {{$message->created_at->format('H:i')}} | {{$message->created_at->format('M d, Y  ')}}</span> --}}
+
+
+
+                            @if ($createdAt->isToday())
+                                {{-- إذا كان الإنشاء اليوم --}}
+                                <span class="msg_time">{{ $createdAt->format('H:i') }} today </span>
+                            @elseif ($createdAt->isYesterday())
+                                {{-- إذا كان الإنشاء يوم أمس --}}
+                                <span class="msg_time">{{ $createdAt->format('H:i') }} yesterday</span>
+                            @else
+                                {{-- إذا كان الإنشاء قبل يومين أو أكثر --}}
+                                <span class="msg_time">{{ $createdAt->format('H:i M d, Y') }}</span>
+                            @endif
+
+                        </div>
+                    </div>
+                @else
+                    <div class="d-flex justify-content-end mb-4">
+                        <div class="msg_cotainer_send">
+                            <p class="text_message">{{ $message->message_text }} </p>
+
+
+                            @if ($createdAt->isToday())
+                                {{-- إذا كان الإنشاء اليوم --}}
+                                <span class="msg_time_send">{{ $createdAt->format('H:i') }} today </span>
+                            @elseif ($createdAt->isYesterday())
+                                {{-- إذا كان الإنشاء يوم أمس --}}
+                                <span class="msg_time_send">{{ $createdAt->format('H:i') }} yesterday</span>
+                            @else
+                                {{-- إذا كان الإنشاء قبل يومين أو أكثر --}}
+                                <span class="msg_time_send">{{ $createdAt->format('H:i M d, Y') }}</span>
+                            @endif
+                        </div>
+                        <div class="img_cont_msg ">
+                            <img src="{{ asset('image/avatars/' . $message->sender->user_avatar) }}"
+                                class="rounded-circle user_img_msg" />
+                        </div>
+                    </div>
+                @endif
+            @endforeach
+
         </div>
     </div>
     <div class="card-footer">
-        <div class="input-group">
-            <div class="input-group-append">
-                <span class="input-group-text attach_btn"><i class="fas fa-paperclip"></i></span>
+        <form action="{{ route('store_ConversationController', ['conversation_id' => $conversation->id]) }}"
+            id="chatForm" method="post">
+            @csrf
+            <div class="input-group">
+                <div class="input-group-append">
+                    <span class="input-group-text attach_btn"><i class="fas fa-paperclip"></i></span>
+                </div>
+
+                <input type="text" id="message_text" name="message_text" class="form-control type_msg"
+                    placeholder="Type your message..." />
+
+                @if ($conversation->user1->id != auth()->id())
+                    <input type="hidden" name="receiver_user_id" value="{{ $conversation->user1->id }}">
+                @else
+                    <input type="hidden" name="receiver_user_id" value="{{ $conversation->user2->id }}">
+                @endif
+
+                </span>
+                {{-- <input type="hidden" name="receiver_user_id" value=""> --}}
+
+                <div class="input-group-append">
+                    <label class="input-group-text send_btn "for="send_btn_input">
+                        <i class="fas fa-location-arrow">
+                            <button type="button" id="send_btn_input" class="send_btn_input">
+                            </button>
+                        </i>
+                    </label>
+                </div>
+
             </div>
-            <input type="text" name="" class="form-control type_msg"
-                placeholder="Type your message..." />
-            <div class="input-group-append">
-                <span class="input-group-text send_btn"><i class="fas fa-location-arrow"></i></span>
-            </div>
-        </div>
+        </form>
     </div>
 </div>

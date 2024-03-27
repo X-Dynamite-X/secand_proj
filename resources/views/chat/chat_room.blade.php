@@ -41,7 +41,11 @@
         var create_ConversationController=" {{ route('create_ConversationController', ['', '']) }}"
         var csrf_token = "{{ csrf_token() }}";
         var conversation_room = `@include("chat.contacts")`;
-
+        var conversation_id = '{{$conversation->id}}';
     </script>
+        <script src="https://js.pusher.com/8.2.0/pusher.min.js"></script>
+
         <script src="{{ asset('js/search.js') }}"></script>
+        <script src="{{ asset('js/chat.js') }}"></script>
+
     @endsection
