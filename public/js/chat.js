@@ -59,7 +59,7 @@ channel.bind("chatuser", function (data) {
 
     console.log('res');
 
-    // if (senderUser == data.encodedreceiverUserId) {
+    if (user_id != data.sender_user_id) {
         console.log(data);
         console.log('res');
         $.ajax({
@@ -67,7 +67,7 @@ channel.bind("chatuser", function (data) {
             method: 'POST',
             data: {
                 _token: csrf_token,
-                message_text: data.message_text,
+                // message_text: data.message_text,
                 encodedConversationId: data.encodedConversationId,
             },
             success: function (res) {
@@ -78,5 +78,5 @@ channel.bind("chatuser", function (data) {
                 console.log('Error:', error);
             }
         });
-    // }
+    }
 });

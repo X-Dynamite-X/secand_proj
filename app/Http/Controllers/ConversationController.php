@@ -98,7 +98,7 @@ class ConversationController extends Controller
 
         // Return a response indicating success
         // return response()->json(['message' => 'Conversation created successfully'], 201);
-        return redirect()->route('show_s done Controller',['conversation_id'=>$conversation->id]);
+        return redirect()->route('show_ConversationController',['conversation_id'=>$conversation->id]);
 
     }
 

@@ -38,7 +38,9 @@ class MessageController extends Controller
         } else {
             $receive_user = $conversation->user1;
         }
-        return view('chat.action_chat.receive', ['message_text' => $request->input('message_text'), 'receive_user' => $receive_user]);
+        $message = Message::where("conversation_id",$request->conversation_id)->get()->last();
+        // dd($message->message_text);
+        return view('chat.action_chat.receive', ['message' => $message, 'receive_user' => $receive_user]);
     }
 
 

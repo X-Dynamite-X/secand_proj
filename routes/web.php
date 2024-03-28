@@ -16,6 +16,8 @@ Route::middleware('auth')->group(function () {
 
     Route::post('/{user1_id}/{user2_id}', [ConversationController::class, 'create'])->name('create_ConversationController')->middleware('CheckUser1');
     Route::get("/chat/{conversation_id}", [MessageController::class, 'show'])->name('show_ConversationController');
+
+
     Route::post("/chat/{conversation_id}/broadcast/messages", [MessageController::class, 'store'])->name('store_ConversationController');
     Route::post("/chat/{conversation_id}/receive/messages", [MessageController::class, 'receiveMessages'])->name('receive_ConversationController');
 
